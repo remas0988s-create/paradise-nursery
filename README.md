@@ -4,7 +4,7 @@
 **GitHub:** remas0988s-create  
 **Course:** IBM — Developing Front-End Apps with React
 
-A responsive plant shopping application built with React, Redux Toolkit, React Redux, and Vite. The landing page introduces Paradise Nursery and its company story. Get Started opens a catalog of **18 plants in 3 categories (6 per category)**, each with a local illustration, name, description, care label, price, and Add to Cart button.
+A responsive plant shopping application built with React, Redux Toolkit, React Redux, and Vite. The landing page visibly says **Welcome to Paradise Nursery**, keeps Get Started, and renders the existing local artwork through CSS `background-image: url(...)` with `background-size: cover`. Get Started opens a catalog of **18 plants in 3 categories (6 per category)**, each with a local illustration, name, description, care label, price, and Add to Cart button.
 
 ## Run locally
 
@@ -44,12 +44,12 @@ npm run preview # preview the production bundle
 | `README.md` | Project name, overview, setup, tests, and code guide |
 | `src/AboutUs.jsx` | Company introduction on the landing page |
 | `src/App.css` | Desktop/mobile layout, colors, cards, and cart styling |
-| `src/App.jsx` | Page navigation, header/cart badge, landing page, cart summary, checkout message |
+| `src/App.jsx` | Page navigation, visible welcome, landing page, and shared components |
 | `src/CartSlice.jsx` | Redux cart reducers, actions, and derived selectors |
-| `src/ProductList.jsx` | Three categories and 18 product cards; dispatches addItem |
-| `src/CartItem.jsx` | Quantity controls, per-item subtotal, removeItem/updateQuantity dispatches |
+| `src/ProductList.jsx` | Complete three-category catalog, shared Home/Plants/Cart header, cart icon/count, product cards and addItem |
+| `src/CartItem.jsx` | Complete cart page: all rows, quantity controls, removal, grand total, Checkout and Continue Shopping |
 
-Supporting files: `src/main.jsx` supplies the Redux Provider; `src/store.js` creates the store; `src/plants.js` defines the plant catalog; `src/assets/` contains the original local SVG illustrations. `index.html`, `package.json`, the lockfile, and `vite.config.js` make the project runnable.
+Supporting files: `src/main.jsx` supplies the Redux Provider; `src/store.js` creates the store; `src/ProductList.jsx` defines the plant catalog; `src/format.js` formats prices; `src/assets/` contains the original local SVG illustrations. `index.html`, `package.json`, the lockfile, and `vite.config.js` make the project runnable.
 
 ## Understand the Redux flow
 
@@ -82,3 +82,8 @@ This is a front-end learning project, not a real store. Prices are in USD. Cart 
 Implementation was prepared with AI assistance and reviewed/tested with Remas's project requirements. Review the code and follow the course's submission and disclosure rules.
 
 Official references: [Redux Toolkit createSlice](https://redux-toolkit.js.org/api/createSlice), [Redux Quick Start](https://redux.js.org/tutorials/quick-start).
+
+
+## IBM Mark review fixes
+
+The rubric-facing code has been consolidated without duplicate state or duplicate UI. ProductList.jsx contains all 18 plant records grouped into three categories and exports the shared NurseryHeader used once by App. CartItem.jsx is the complete cart screen, with CartRow kept private in the same file. Redux remains the only owner of cart items and quantities. See [REVIEW_REPORT.md](REVIEW_REPORT.md) for the changes and validation.

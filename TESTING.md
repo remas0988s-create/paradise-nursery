@@ -1,21 +1,14 @@
 # Validation record
 
-Validated 11 November 2026 (Asia/Riyadh).
+Validated 11 November 2026 (Asia/Riyadh), after the IBM Mark review changes.
 
-## Automated
+- `npm test`: **3 test files passed; 20 tests passed; 0 failures**.
+- `npm run build`: successful production bundle, Vite 7.3.8.
+- `git diff --check`: passed before publication.
+- Full raw command output: [tests](validation/tests.txt), [build](validation/build.txt).
 
-- `npm test`: 2 test files passed; **17 tests passed**.
-- `npm run build`: successful production bundle (Vite 7.3.8).
-- Runner: Vitest 4.1.12, jsdom, React Testing Library, user-event; Node 24.22.1.
-- No external backend or payment requests are part of the app.
+The reducer tests cover add, duplicate handling, updates, totals, removal, zero, unknown IDs and invalid quantities. The application tests cover the welcome text, Get Started, 18 plants, 3 categories, cart badge, disabled/re-enabled Add buttons, navigation, totals, empty cart and checkout. Review regression tests also render CartItem on its own and confirm it owns the full cart experience, and verify that exactly one shared Home/Plants/Cart header is displayed.
 
-## Browser checks
+The built app was exercised in Chromium. Computed CSS confirmed a real local background-image URL and cover. Adding Monstera and Snake Plant produced $43 and a badge of 2; increasing Monstera produced $68 and 3; decreasing then removing Snake Plant produced $25 and 1. Checkout showed its demo message. Continue Shopping preserved state and re-enabled the removed plant's Add button.
 
-A real Chromium browser loaded the built production app. Get Started opened the 18-plant catalog. Adding Monstera disabled its Add button and set the cart badge to 1. Adding Snake Plant set it to 2. The cart showed $43.00. Increasing Monstera changed its quantity to 2, its subtotal to $50.00, the badge to 3, and the order total to $68.00. Desktop landing/cart layouts were inspected. Responsive CSS is included; mobile-device visual testing is not claimed.
-
-## Known limits
-
-- Checkout is an explicit Coming soon message, not a transaction.
-- Cart state is in memory and resets on refresh.
-- Plant artwork is stylized illustration, not botanical photography.
-- Tests validate the user-supplied requirements; a separate Coursera rubric was not supplied.
+See [REVIEW_REPORT.md](REVIEW_REPORT.md) for the detailed Arabic report. No new IBM score or mobile-device visual test is claimed. Checkout is a demo; refresh resets the in-memory cart.

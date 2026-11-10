@@ -1,0 +1,14 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> paradise-nursery@1.0.0 test
+> vitest run
+
+
+ RUN  v4.1.12 /workspace/scratch/a6b53780c36c/published-paradise
+
+
+ Test Files  3 passed (3)
+      Tests  20 passed (20)
+   Start at  00:23:40
+   Duration  2.67s (transform 283ms, setup 433ms, import 469ms, tests 2.35s, environment 1.69s)
+

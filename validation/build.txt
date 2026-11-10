@@ -1,0 +1,29 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> paradise-nursery@1.0.0 build
+> vite build
+
+vite v7.3.8 building client environment for production...
+transforming...
+✓ 64 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                      0.56 kB │ gzip:  0.37 kB
+dist/assets/plant-14-DNAmNRzU.svg    4.84 kB │ gzip:  1.05 kB
+dist/assets/plant-3-CjRhnUO3.svg     9.73 kB │ gzip:  1.20 kB
+dist/assets/plant-5-BZbkpbkF.svg     9.73 kB │ gzip:  1.19 kB
+dist/assets/plant-1-DSY6hEfH.svg     9.73 kB │ gzip:  1.19 kB
+dist/assets/plant-9-DwubR1jL.svg     9.73 kB │ gzip:  1.19 kB
+dist/assets/plant-10-DHQZO0ff.svg    9.73 kB │ gzip:  1.19 kB
+dist/assets/plant-12-D66j0HnV.svg    9.73 kB │ gzip:  1.19 kB
+dist/assets/plant-15-Cl0liOhF.svg    9.73 kB │ gzip:  1.20 kB
+dist/assets/plant-7-BfjWddnd.svg    10.43 kB │ gzip:  1.28 kB
+dist/assets/plant-4-8G4YxSVd.svg    10.44 kB │ gzip:  1.28 kB
+dist/assets/plant-11-BwDVXnNd.svg   10.44 kB │ gzip:  1.29 kB
+dist/assets/plant-8-Bw1u4qHs.svg    17.03 kB │ gzip:  1.91 kB
+dist/assets/plant-6-Bky0AvDV.svg    17.03 kB │ gzip:  1.91 kB
+dist/assets/plant-18-C2QMdsXr.svg   17.10 kB │ gzip:  1.91 kB
+dist/assets/hero-DZeeVVTi.svg       17.15 kB │ gzip:  2.62 kB
+dist/assets/index-Dmbm0k8_.css      10.68 kB │ gzip:  3.18 kB
+dist/assets/index-qGey4rpF.js      270.04 kB │ gzip: 84.01 kB
+✓ built in 1.21s
